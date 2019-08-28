@@ -34,10 +34,15 @@ Route::get('fo', function () {
 // Route Parameters
 
     // Required Parameters
-    Route::get('tham-so/{id}/{slug}', function ($id, $slug) {
-        return 'Tham số ID ' .$id. "Tham số Slug " .$slug;
-    });
+    // Route::get('tham-so/{id}/{slug}', function ($id, $slug) {
+    //     return 'Tham số ID ' .$id. "Tham số Slug " .$slug;
+    // });
 
-    Route::get('tham-so/{id}/slug/{slug}', function ($a, $b) {
-        return 'Tham số ID ' .$a. "Tham số Slug " .$b;
+    // Route::get('tham-so/{id}/slug/{slug}', function ($a, $b) {
+    //     return 'Tham số ID ' .$a. "Tham số Slug " .$b;
+    // });
+
+    // Optional Parameters
+    Route::get('tham-so/{id}/slug/{slug?}', function ($a) {
+        return 'Tham số ID ' .$a;
     });
