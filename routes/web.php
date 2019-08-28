@@ -19,3 +19,7 @@ Route::get('/', function () {
 Route::get('fo', function () {
     return 'Hello World';
 });
+
+
+        // Basic Routing - The Default Route Files
+        Route::get('/user', 'UserController@index');
