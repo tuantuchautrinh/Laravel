@@ -26,3 +26,6 @@ Route::get('fo', function () {
 
     // Redirect Routes
     Route::redirect('/foo', '/fo', 303); //only 302, 303
+
+    // View Routes
+    Route::view('/welcome', 'welcome');
