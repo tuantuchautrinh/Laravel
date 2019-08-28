@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Basic Routing
+Route::get('fo', function () {
+    return 'Hello World';
+});
