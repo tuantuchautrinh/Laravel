@@ -23,3 +23,6 @@ Route::get('fo', function () {
 
         // Basic Routing - The Default Route Files
         Route::get('/user', 'UserController@index');
+
+    // Redirect Routes
+    Route::redirect('/foo', '/fo', 303); //only 302, 303
