@@ -50,16 +50,24 @@ Route::get('fo', function () {
     // Regular Expression Constraints
     Route::get('tham-so/{id}/slug/{slug?}', function ($a, $b = 0) {
         return 'Tham số ID ' .$a. "Tham số Slug " .$b;
-    })->where(['id' => '[0-9]{2}', 'slug' => '[0-9a-zA-Z_]+']);;
+    });
 
     Route::get('tham-so/{id}/slug/{slug?}', function ($a, $b = 0) {
         return 'Tham số ID ' .$a. "Tham số Slug " .$b;
-    })->where(['id' => '[0-9]{2}', 'slug' => '[a-zA-Z-]+']);;
+    });
 
     Route::get('tham-so/{id}/slug/{slug?}', function ($a, $b = 0) {
         return 'Tham số ID ' .$a. "Tham số Slug " .$b;
-    })->where(['id' => '[0-9]{2}', 'slug' => '[a-zA-Z+]+']);;
+    });
 
     Route::get('tham-so/{id}/slug/{slug?}', function ($a, $b = 0) {
         return 'Tham số ID ' .$a. "Tham số Slug " .$b;
-    })->where(['id' => '[0-9]{2}', 'slug' => '[a-zA-Z=]+']);;
+    });
+
+    Route::get('parameter/{slug?}', function ($b = 1) {
+        return "Tham số Slug " .$b;
+    });
+
+    Route::get('laravel/{id}', function ($a) {
+        return 'Tham số ID ' .$b;
+    });
