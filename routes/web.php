@@ -71,3 +71,11 @@ Route::get('fo', function () {
     Route::get('laravel/{id}', function ($a) {
         return 'Tham số ID ' .$b;
     });
+
+    Route::get('tai-lieu/lap-trinh/khoa-hoc-lap-trinh-laravel/lession-01', function () {
+        return 'Lession 01';
+    })->name('lession01');
+
+    Route::get('chuyen-huong', function () {
+        return redirect()->route('lession01');
+    });
