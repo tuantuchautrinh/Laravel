@@ -70,3 +70,25 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Via Composer Create-Project from https://laravel.com/docs/master/installation
+
+### `composer create-project --prefer-dist laravel/laravel blog` to create "blog" folder.
+
+## Clone and run Laravel Project
+
+### 1.`copy .env.example .env` to create ".env" file.
+
+### 2.Composer Update Laravel
+
+#### 2.1.`composer install` to create "vendor" file.
+
+#### or
+
+#### 2.2.`composer update --no-scripts`. However, you're running into a different problem. It appears that, in your "composer.json" file, the original developer has added some pre- or post- update actions that are failing.
+
+### 3.`php artisan key:generate` to have application key set successfully.
+
+## Local Development Server
+
+### `php artisan serve` to start a development server.
