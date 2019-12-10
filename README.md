@@ -100,3 +100,11 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 ### Resource Controllers (with Actions Handled "GET-POST-PUT/PATCH-DELETE")
 
 #### `php artisan make:controller <folder>/<\WhatName\>Controller --resource`.
+
+## Database:Migrations
+
+### Generating Migrations
+
+#### `php artisan make:migration create_<\DatabaseName_in_(LaravelProject/database/migrations)\>_table --create=<\DatabaseName_in_server\>` to create a migration
+
+### 2.`php artisan migrate` to generate database in server.
