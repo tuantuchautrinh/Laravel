@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('hello', 'TuanController@hello');
+Route::get('tin-tuc', 'TuanController@news');
+
+/*--------------------------------------------------------------------------*/
+
 // Basic Routing
 Route::get('fo', function () {
     return 'Hello World';
@@ -79,3 +84,5 @@ Route::get('fo', function () {
     Route::get('chuyen-huong', function () {
         return redirect()->route('lession01');
     });
+
+/*--------------------------------------------------------------------------*/
