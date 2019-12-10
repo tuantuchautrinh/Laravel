@@ -107,4 +107,8 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 
 #### `php artisan make:migration create_<\DatabaseName_in_(LaravelProject/database/migrations)\>_table --create=<\DatabaseName_in_server\>` to create a migration
 
-### 2.`php artisan migrate` to generate database in server.
+### `php artisan migrate` to generate database in server.
+
+## Create Model (Laravel Project ? app ?)
+
+### `php artisan make:model <\WhatName\>` like file "News.php" in Project.
