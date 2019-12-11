@@ -14,7 +14,12 @@ class ProductController extends Controller
      */
     public function index()
     {
-        echo 'ProductController - IndexAction';
+        /**
+         * khi return view sẽ dẫn đến folder LaravelProject/public
+         */
+        // return view('backend.master');
+
+        return view('backend.modules.product.index');
     }
 
     /**
@@ -24,7 +29,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.modules.product.create');
     }
 
     /**
@@ -57,7 +62,7 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('backend.modules.product.edit');
     }
 
     /**
