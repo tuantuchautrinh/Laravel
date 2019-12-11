@@ -56,6 +56,9 @@ img.thumbs {
     padding: 2px;
     background: white;
 }
+.required {
+    color: red;
+}
 .form_label {
     display: inline-block;
     width: 120px;
@@ -89,7 +92,7 @@ img.thumbs {
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    
+
 }
 .button:hover {
     background-color: #C0206E;
@@ -206,7 +209,7 @@ img.thumbs {
     text-align: right;
 }
 /********************************
-    DÙNG CHO TRANG CHÍNH 
+    DÙNG CHO TRANG CHÍNH
  *******************************/
 .function_table {
     border-spacing: 10px;
@@ -281,7 +284,7 @@ img.thumbs {
     background: url("../images/news.png") no-repeat center center;
 }
 /********************************
-    DÙNG CHO TRANG LOGIN 
+    DÙNG CHO TRANG LOGIN
  *******************************/
 .login_img {
     width: 150px;
@@ -289,7 +292,7 @@ img.thumbs {
     background: url("../images/login_lock.png") no-repeat center center;
 }
 /*************************************************
-    THANH PHÂN TRANG (THUẬT TOÁN PHÂN TRANG) 
+    THANH PHÂN TRANG (THUẬT TOÁN PHÂN TRANG)
  ************************************************/
 #paging_nav {
     text-align: center;
