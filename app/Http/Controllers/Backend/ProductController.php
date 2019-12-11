@@ -46,7 +46,14 @@ class ProductController extends Controller
         /**
          * Hiển thị tất cả dữ liệu được điền vào
          */
-        dd($request->all());
+        // dd($request->all());
+
+        /**
+         * Hiển thị tất cả dữ liệu ngoại trừ "_token" và "add"
+         */
+        // dd($request->except('_token', 'add'));
+
+        dd($request->name);
     }
 
     /**

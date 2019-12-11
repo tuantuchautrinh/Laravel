@@ -113,7 +113,7 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 
 ### `php artisan make:request <folder>/<\WhatName\>` to create a form request class.
 
-#### (Laravel Project → app → Http → Requests → <folder> → <\WhatName\>)
+#### (Laravel Project → app → Http → Requests → <\folder\> → <\WhatName\>)
 
 ## Database:Migrations
 
@@ -121,7 +121,7 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 
 #### `php artisan make:migration create_<\DatabaseName_in_(LaravelProject/database/migrations)\>_table --create=<\DatabaseName_in_server\>` to create a migration.
 
-##### Example: `php artisan make:migration create_product_table --create=product`
+##### Example: `php artisan make:migration create_product_table --create=product`.
 
 ### `php artisan migrate` to generate database in server.
 
@@ -135,4 +135,6 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 
 ## Eloquent ORM: Getting Started
 
-### `php artisan make:model <\WhatName\>` like file "News.php" in Project and create Model (Laravel Project → app →).
+### `php artisan make:model <\WhatName\>` like file "News.php" in Project and create Model (Laravel Project → app → <\WhatName\>).
+
+#### Example: `php artisan make:model Models/Product`.
