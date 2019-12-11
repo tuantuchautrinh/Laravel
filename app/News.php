@@ -11,5 +11,5 @@ class News extends Model
      *
      * @var string
      */
-    protected $table = 'my_flights';
+    protected $table = 'news';
 }
