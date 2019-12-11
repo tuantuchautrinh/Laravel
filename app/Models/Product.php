@@ -12,7 +12,7 @@ class Product extends Model
      *
      * @var string
      */
-    protected $table = 'my_flights';
+    protected $table = 'product';
 
     // #Eloquent ORM - Getting Started #Defining Models #Inserting & Updating Models #Mass Assignment
     /**
@@ -21,5 +21,5 @@ class Product extends Model
      * @var array
      */
     // fillable bao gồm các cột được phép tương tác đến
-    protected $fillable = ['name'];
+    protected $fillable = ['id', 'name', 'price', 'image', 'intro', 'content', 'status', 'created_at', 'updated_at'];
 }
