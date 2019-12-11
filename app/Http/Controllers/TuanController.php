@@ -24,6 +24,6 @@ class TuanController extends Controller
 
         $news->save();
 
-        // return 'Insert thành công';
+        return 'Insert thành công';
     }
 }
