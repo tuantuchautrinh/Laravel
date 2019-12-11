@@ -109,6 +109,6 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 
 ### `php artisan migrate` to generate database in server.
 
-## Create Model (Laravel Project ? app ?)
+## Eloquent ORM: Getting Started
 
-### `php artisan make:model <\WhatName\>` like file "News.php" in Project.
+### `php artisan make:model <\WhatName\>` like file "News.php" in Project Create Model (Laravel Project → app →).
