@@ -29,4 +29,13 @@ class StoreRequest extends FormRequest
             'intro' => 'required'
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Vui lòng nhập tên sản phẩm',
+            'price.required' => 'Vui lòng nhập giá sản phẩm',
+            'intro.required' => 'Vui lòng nhập tóm tắt sản phẩm'
+        ];
+    }
 }

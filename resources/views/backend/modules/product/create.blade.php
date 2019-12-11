@@ -21,6 +21,7 @@
 
                 <span class="form_label">Tên sản phẩm:</span>
                 <span class="form_item">
+                    {{--- value="{{ old('name') }} là giữ lại giá trị nhập khi nhấn submit ---}}
                     <input type="text" name="name" class="textbox" value="{{ old('name') }}" />
                 </span><br />
                 <span class="form_label">Giá:</span>
