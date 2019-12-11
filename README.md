@@ -97,13 +97,23 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 
 ### `php artisan route:list`.
 
-## Controllers (Laravel Project → app → Http → Controllers)
+## The Basics - Controllers (Laravel Project → app → Http → Controllers)
 
 ### Basic Controllers: `php artisan make:controller <\WhatName\>Controller`.
+
+#### Example: `php artisan make:controller <folder>/<\WhatName\>Controller`.
 
 ### Resource Controllers (with Actions Handled "GET-POST-PUT/PATCH-DELETE")
 
 #### `php artisan make:controller <folder>/<\WhatName\>Controller --resource`.
+
+##### Example: `php artisan make:controller Backend/ProductController --resource`.
+
+## The Basics - Validation 
+
+### `php artisan make:request <folder>/<\WhatName\>` to create a form request class.
+
+#### (Laravel Project → app → Http → Requests → <folder> → <\WhatName\>)
 
 ## Database:Migrations
 
