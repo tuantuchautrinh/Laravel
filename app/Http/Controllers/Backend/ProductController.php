@@ -5,6 +5,17 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\Product\StoreRequest;
+/**
+ * Symfony\Component\Debug\Exception\FatalThrowableError
+ * Class 'App\Http\Controllers\Backend\Product' not found
+ *
+ * use App\Models\Product;
+ *
+ * Stack trace
+ *
+ * App\Http\Controllers\Backend\ProductController::store:100
+ * app/Http/Controllers/Backend/ProductController.php:100
+ */
 
 class ProductController extends Controller
 {
@@ -42,6 +53,7 @@ class ProductController extends Controller
     public function store(StoreRequest $request)
     {
         echo 'Dữ liệu được thêm';
+        // Phải đóng tất cả dd($request) để code chạy xuống dưới
 
         /**
          * Hiển thị tất cả dữ liệu được điền vào
@@ -51,9 +63,17 @@ class ProductController extends Controller
         /**
          * Hiển thị tất cả dữ liệu ngoại trừ "_token" và "add"
          */
-        dd($request->except('_token', 'add'));
+        // dd($request->except('_token', 'add'));
 
-        // dd($request->name);
+        /**
+         * Lấy một số trường nhất định
+         */
+        // dd($request->only('_token','add'));
+
+        /**
+         * Chỉ lấy trường name ra
+         */
+        // dd($request->name)
 
         // Để insert dữ liệu ta có 2 cách như bên dưới
 
@@ -76,6 +96,7 @@ class ProductController extends Controller
             // #Eloquent ORM - Getting Started #Inserting & Updating Models #Mass Assignment
             // Example: $flight = App\Flight::create(['name' => 'Flight 10']);
             // (LaravelProject/app/Models/tên Model)::create(rồi truyền dữ liệu vô)
+            $data = $request->except('_token', 'add');
             Product::create($data);
     }
 
