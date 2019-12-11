@@ -109,9 +109,19 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 
 ### Generating Migrations
 
-#### `php artisan make:migration create_<\DatabaseName_in_(LaravelProject/database/migrations)\>_table --create=<\DatabaseName_in_server\>` to create a migration
+#### `php artisan make:migration create_<\DatabaseName_in_(LaravelProject/database/migrations)\>_table --create=<\DatabaseName_in_server\>` to create a migration.
+
+##### Example: `php artisan make:migration create_product_table --create=product`
 
 ### `php artisan migrate` to generate database in server.
+
+### Running Migrations (the ordinal number in the 'bath' column is the number of migration uses)
+
+#### Rolling Back Migrations: `php artisan migrate:rollback` or `php artisan migrate:reset` to delete database in server except for Table: migrations.
+
+#### `php artisan migrate:rollback --step=N` and 'N' is the table number removed from bottom to top.
+
+### Rollback & Migrate In Single Command: `php artisan migrate:refresh` to re-creates your entire database.
 
 ## Eloquent ORM: Getting Started
 
