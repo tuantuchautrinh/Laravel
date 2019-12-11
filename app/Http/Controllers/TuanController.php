@@ -7,21 +7,23 @@ use App\News;
 
 class TuanController extends Controller
 {
-    public function hello() {
+    public function hello () {
         echo "TuanController - Hello";
     }
 
-    public function news() {
+    public function news () {
         return view('temp.tintuc');
     }
 
-    public function addnews() {
+    public function addnews () {
         // Validate the request...
 
-        $flight = new Flight;
+        $news = new News;
 
-        $flight->name = $request->name;
+        $news->name = 'Tin tức hôm nay';
 
-        $flight->save();
+        $news->save();
+
+        // return 'Insert thành công';
     }
 }

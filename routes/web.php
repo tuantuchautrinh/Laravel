@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Route::get('hello', 'TuanController@hello');
 Route::get('tin-tuc', 'TuanController@news');
+Route::get('them-tin-tuc', 'TuanController@addnews');
 
 /*--------------------------------------------------------------------------*/
 
