@@ -93,6 +93,10 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 
 ### `php artisan serve` to start a development server.
 
+## Show All Router
+
+### `php artisan route:list`.
+
 ## Controllers (Laravel Project → app → Http → Controllers)
 
 ### Basic Controllers: `php artisan make:controller <\WhatName\>Controller`.
