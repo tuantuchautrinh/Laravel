@@ -2,6 +2,8 @@
 @extends ('backend.master')
 @section('content')
 
+    {{--- #The Basics - Validation #Validation Quickstart #Displaying The Validation Errors ---}}
+    <!-- Create Post Form -->
     @if ($errors->any())
         <div class="error_msg">
             <ul>
