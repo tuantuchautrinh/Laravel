@@ -21,9 +21,10 @@ Route::namespace('Backend')->group(function() {
             Route::get('index','ProductController@index')->name('index');
             Route::get('create','ProductController@create')->name('create');
             Route::post('store','ProductController@store')->name('store');
-            Route::get('edit/{id}','ProductController@edit')->name('edit');
-            Route::get('update/{id}','ProductController@update')->name('update');
-            Route::get('destroy/{id}','ProductController@destroy')->name('destroy');
+            // {3} của where('id', '[0-9]{3}+') bắt buộc URL phải có 3 chữ số
+            Route::get('edit/{id}','ProductController@edit')->name('edit')->where('id', '[0-9]{3}+');
+            Route::get('update/{id}','ProductController@update')->name('update')->where('id', '[0-9]+');
+            Route::get('destroy/{id}','ProductController@destroy')->name('destroy')->where('id', '[0-9]+');
         });
     });
 });
