@@ -40,7 +40,12 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        echo 'Dữ liệu được thêm';
+
+        /**
+         * Hiển thị tất cả dữ liệu được điền vào
+         */
+        dd($request->all());
     }
 
     /**
