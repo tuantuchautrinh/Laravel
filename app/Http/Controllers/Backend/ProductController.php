@@ -51,9 +51,32 @@ class ProductController extends Controller
         /**
          * Hiển thị tất cả dữ liệu ngoại trừ "_token" và "add"
          */
-        // dd($request->except('_token', 'add'));
+        dd($request->except('_token', 'add'));
 
-        dd($request->name);
+        // dd($request->name);
+
+        // Để insert dữ liệu ta có 2 cách như bên dưới
+
+            /**
+             * Cách 1
+             */
+            // #Eloquent ORM - Getting Started #Inserting & Updating Models #Inserts
+
+            // // Validate the request...
+
+            // $flight = new Flight;
+
+            // $flight->name = $request->name;
+
+            // $flight->save();
+
+            /**
+             * Cách 2 (nhanh hơn cách 1)
+            */
+            // #Eloquent ORM - Getting Started #Inserting & Updating Models #Mass Assignment
+            // Example: $flight = App\Flight::create(['name' => 'Flight 10']);
+            // (LaravelProject/app/Models/tên Model)::create(rồi truyền dữ liệu vô)
+            Product::create($data);
     }
 
     /**
