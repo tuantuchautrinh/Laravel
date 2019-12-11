@@ -5,17 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\Product\StoreRequest;
-/**
- * Symfony\Component\Debug\Exception\FatalThrowableError
- * Class 'App\Http\Controllers\Backend\Product' not found
- *
- * use App\Models\Product;
- *
- * Stack trace
- *
- * App\Http\Controllers\Backend\ProductController::store:100
- * app/Http/Controllers/Backend/ProductController.php:100
- */
+use App\Models\Product;
 
 class ProductController extends Controller
 {
