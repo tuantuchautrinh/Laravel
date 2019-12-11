@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/**
+ * Illuminate\Contracts\Container\BindingResolutionException
+ * Target class [App\Http\Controllers\Backend/ProductController] does not exist.
+ *
+ * Route::get('index', 'Backend/ProductController@index');
+ *
+ * Stack trace
+ *
+ * Illuminate\Container\Container::build :805
+ * vendor/laravel/framework/src/Illuminate/Container/Container.php:805
+ */
+
+Route::get('index', 'Backend\ProductController@index');
+
+
