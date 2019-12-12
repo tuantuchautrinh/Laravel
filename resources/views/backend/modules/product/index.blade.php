@@ -29,7 +29,8 @@
             <td class="list_td aligncenter">
                 <a href="{{ route('admin.product.edit',['id' => $item->id]) }}"><img src="{{ asset('backend/images/edit.png') }}" /></a>&nbsp;&nbsp;&nbsp;
                 {{--- ['id' => $item->id] 'id' được gọi vào từ route của (LaravelProject/routes/web.php) và "$item->id" được truyền vào từ database ---}}
-                <a href="{{ route('admin.product.destroy',['id' => $item->id]) }}"><img src="{{ asset('backend/images/delete.png') }}" /></a>
+                {{--- ta gọi hàm "acceptDelete()" từ (LaravelProject/resources/views/backend/master.blade.php) để khi click vào sẽ hiện thông báo ---}}
+                <a onclick="return acceptDelete()" href="{{ route('admin.product.destroy',['id' => $item->id]) }}"><img src="{{ asset('backend/images/delete.png') }}" /></a>
             </td>
         </tr>
         @endforeach

@@ -5,7 +5,14 @@
     <meta name="author" content="QuocTuan.Info" />
     {{--- asset là mặc định dẫn đến folder LaravelProject/public ---}}
     <link rel="stylesheet" href="{{ asset('backend/templates/css/style.css') }}" />
-	<title>Admin Area :: Login</title>
+    <title>Admin Area :: Login</title>
+    <script>
+        function acceptDelete() {
+            window.confirm('Bạn có chắc muốn xóa không');
+        }
+        // viết hàm phải gọi hàm -> gọi hàm ra
+        // acceptDelete();
+    </script>
 </head>
 <body>
 <div id="layout">
