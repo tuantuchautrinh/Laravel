@@ -17,7 +17,7 @@ class ProductController extends Controller
     public function index()
     {
         /**
-         * khi return view sẽ dẫn đến folder LaravelProject/public
+         * khi return view sẽ dẫn đến folder LaravelProject/resources/views/backend/master.blade.php
          */
         // return view('backend.master');
 
@@ -25,7 +25,7 @@ class ProductController extends Controller
         $data = Product::all();
         // dd($data);
 
-        // ['products' => $data] với "products" tên do mình đặt và truyền dữ liệu qua là "data"
+        // ['products' => $data] với "products" tên do mình đặt và truyền dữ liệu qua là "data" sau đó truyền vào view(LaravelProject/resources/views/backend/modules/product/index.blade.php)
         return view('backend.modules.product.index',['products' => $data]);
     }
 

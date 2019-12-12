@@ -27,8 +27,9 @@
             {{--- change the date format in laravel view page at "92 check" ---}}
             <td class="list_td aligncenter">{{ date('d-m-Y | H:m:i', strtotime($item->created_at)) }}</td>
             <td class="list_td aligncenter">
-                <a href=""><img src="{{ asset('backend/images/edit.png') }}" /></a>&nbsp;&nbsp;&nbsp;
-                <a href=""><img src="{{ asset('backend/images/delete.png') }}" /></a>
+                <a href="{{ route('admin.product.edit',['id' => $item->id]) }}"><img src="{{ asset('backend/images/edit.png') }}" /></a>&nbsp;&nbsp;&nbsp;
+                {{--- ['id' => $item->id] 'id' được gọi vào từ route của (LaravelProject/routes/web.php) và "$item->id" được truyền vào từ database ---}}
+                <a href="{{ route('admin.product.destroy',['id' => $item->id]) }}"><img src="{{ asset('backend/images/delete.png') }}" /></a>
             </td>
         </tr>
         @endforeach
