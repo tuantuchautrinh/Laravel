@@ -122,7 +122,7 @@ class ProductController extends Controller
          */
         request()->image->move(public_path('images'), $data['image']);
 
-            // Cách 2
+            // ta dùng cách 2
             Product::create($data);
 
         // với with('thanhcong') ta truyền từ Controller(LaravelProject/app/Http/Controllers/Backend/ProductController.php) sang View(LaravelProject/resources/views/backend/modules/product/index.blade.php)

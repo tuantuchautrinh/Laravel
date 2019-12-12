@@ -38,9 +38,16 @@
                 <span class="form_item">
                     <textarea name="content" rows="8" class="textbox">{{ old('content', $product->content) }}</textarea>
                 </span><br />
-                <span class="form_label">Hình sản phẩm:</span>
+                <span class="form_label">Hình cũ của sản phẩm:</span>
                 <span class="form_item">
-                    <input type="file" name="image" class="textbox" />
+                    @php
+                        // tạo biến "image" = ta lấy đường dẫn file hình nối với column
+                        $image = 'images/'.$product->image;
+                    @endphp
+                    {{--- sau đó ta echo $image để xem đường dẫn ---}}
+                    {{--- {{ $image }} ---}}
+
+                    <img src="{{ asset($image) }}" width="100px"/>
                 </span><br />
                 <span class="form_label">Trạng thái sản phẩm: <span class="required">*</span></span>
                 <span class="form_item">
