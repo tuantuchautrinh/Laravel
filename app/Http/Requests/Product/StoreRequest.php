@@ -28,7 +28,7 @@ class StoreRequest extends FormRequest
             'name' => 'required|unique:product,name',
             // giá phải là số không dùng chữ => dùng integer,
             // giá thấp nhất là 1000 => dùng min:giá trị
-            'price' => 'required|interger|min:10000',
+            'price' => 'required|integer|min:10000',
             'intro' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ];

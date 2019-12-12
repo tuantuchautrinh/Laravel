@@ -171,6 +171,17 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // #Eloquent ORM - Getting Started #Deleting Models
+        /**
+         * $flight = App\Flight::find(1);
+         *
+         * $flight->delete();
+         */
+        // ta gọi model Product vào và kiếm số thứ tự là "id" tức là '1' like (find(1)) trong database
+        $product = Product::find($id);
+
+        $product->delete();
+
+        return redirect()->route('admin.product.index')->with('thanhcong', 'Xóa sản phầm thành công');
     }
 }
