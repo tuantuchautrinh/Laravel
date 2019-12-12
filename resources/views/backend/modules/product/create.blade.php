@@ -15,7 +15,7 @@
     @endif
 
     <form action="{{ route('admin.product.store') }}" method="POST" enctype="multipart/form-data" style="width: 650px;">
-        {{--- csrf là 1 token để bảo về form an toàn hơn thiếu sẽ báo lỗi "419 | Page Expired" ---}}
+        {{--- csrf là 1 token để bảo vệ form an toàn hơn thiếu sẽ báo lỗi "419 | Page Expired" ---}}
         @csrf
         <fieldset>
                 <legend>Thông Tin Sản Phẩm</legend>

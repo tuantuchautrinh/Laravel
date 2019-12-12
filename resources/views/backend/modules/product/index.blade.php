@@ -17,7 +17,7 @@
             <td class="action_col">Quản lý?</td>
         </tr>
 
-        <!--- products được truyên qua từ (LaravelProject/app/Http/Controllers/Backend/ProductController.php) --->
+        <!--- products được truyền qua từ (LaravelProject/app/Http/Controllers/Backend/ProductController.php) --->
         @foreach($products as $item)
         <tr class="list_data">
             {{--- $loop->iteration là mặc định không bao giờ thay đổi và tăng từ 1 đến n ---}}
@@ -30,7 +30,7 @@
                 <a href="{{ route('admin.product.edit',['id' => $item->id]) }}"><img src="{{ asset('backend/images/edit.png') }}" /></a>&nbsp;&nbsp;&nbsp;
                 {{--- ['id' => $item->id] 'id' được gọi vào từ route của (LaravelProject/routes/web.php) và "$item->id" được truyền vào từ database ---}}
                 {{--- ta gọi hàm "acceptDelete()" từ (LaravelProject/resources/views/backend/master.blade.php) để khi click vào sẽ hiện thông báo ---}}
-                <a onclick="return acceptDelete()" href="{{ route('admin.product.destroy',['id' => $item->id]) }}"><img src="{{ asset('backend/images/delete.png') }}" /></a>
+                <a onclick="return acceptDelete('Bạn có chắc muốn xóa không')" href="{{ route('admin.product.destroy',['id' => $item->id]) }}"><img src="{{ asset('backend/images/delete.png') }}" /></a>
             </td>
         </tr>
         @endforeach

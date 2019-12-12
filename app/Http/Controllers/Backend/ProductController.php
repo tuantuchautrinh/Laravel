@@ -148,7 +148,10 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        return view('backend.modules.product.edit');
+        // ta lấy dữ liệu cần sửa trong database đổ ra
+        $data = Product::find($id);
+        // dd($data);
+        return view('backend.modules.product.edit',['product' => $data]);
     }
 
     /**

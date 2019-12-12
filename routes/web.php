@@ -22,7 +22,7 @@ Route::namespace('Backend')->group(function() {
             Route::get('create','ProductController@create')->name('create');
             Route::post('store','ProductController@store')->name('store');
             Route::get('edit/{id}','ProductController@edit')->name('edit');
-            Route::get('update/{id}','ProductController@update')->name('update');
+            Route::post('update/{id}','ProductController@update')->name('update');
             Route::get('destroy/{id}','ProductController@destroy')->name('destroy');
         });
     });

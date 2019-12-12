@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="{{ asset('backend/templates/css/style.css') }}" />
     <title>Admin Area :: Login</title>
     <script>
-        function acceptDelete() {
-            window.confirm('Bạn có chắc muốn xóa không');
+        function acceptDelete($msg) {
+            if(window.confirm($msg) == true) {
+                return true;
+            }
+            return false;
         }
         // viết hàm phải gọi hàm -> gọi hàm ra
         // acceptDelete();
