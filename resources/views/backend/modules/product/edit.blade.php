@@ -49,10 +49,14 @@
 
                     <img src="{{ asset($image) }}" width="100px"/>
                 </span><br />
+                <span class="form_label">Hình sản phẩm:</span>
+                <span class="form_item">
+                    <input type="file" name="image" class="textbox" />
+                </span><br />
                 <span class="form_label">Trạng thái sản phẩm: <span class="required">*</span></span>
                 <span class="form_item">
                     <input type="radio" name="status" value="1" {{ (old('status', $product->status) == 1) ? 'checked' : '' }} /> Hiển thị
-                    <input type="radio" name="status" value="2" {{ (old('status') == $product->status) ? 'checked' : '' }} /> Ẩn
+                    <input type="radio" name="status" value="2" {{ (old('status', $product->status) == $product->status) ? 'checked' : '' }} /> Ẩn
                 </span><br />
                 <span class="form_label"></span>
                 <span class="form_item">

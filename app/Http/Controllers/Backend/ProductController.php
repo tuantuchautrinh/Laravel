@@ -126,7 +126,7 @@ class ProductController extends Controller
             Product::create($data);
 
         // với with('thanhcong') ta truyền từ Controller(LaravelProject/app/Http/Controllers/Backend/ProductController.php) sang View(LaravelProject/resources/views/backend/modules/product/index.blade.php)
-        return redirect()->route('admin.product.index')->with('thanhcong', 'Thêm sản phầm thành công');
+        return redirect()->route('admin.product.index')->with('thanhcong', 'Thêm sản phẩm thành công');
     }
 
     /**
@@ -163,7 +163,36 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        /**
+         * Ta copy như function store()
+         *
+         * #Eloquent ORM - Getting Started #Inserting & Updating Models #Updates - Mass Updates
+         *
+         * App\Flight::where('active', 1)
+         *
+         *           ->where('destination', 'San Diego')
+         *
+         *           ->update(['delayed' => 1]);
+         *
+         * Sau đó ta giải quyết với 2 bước sau:
+         *
+         * Bước 1: Sửa thông tin sản phẩm nhưng không sửa hình
+         *
+         * Bước 2: Sửa hình
+         */
+
+        $data = $request->except('_token', 'add');
+        // empty là rỗng là không có hình nhưng dấu "!" phía trước là ngược lại
+        if(!empty($request->image)) {
+            $data['image'] = time()."-".request()->image->getClientOriginalExtension();
+            request()->image->move(public_path('images'), $data['image']);
+        }
+
+        // sản phẩm(model):: "find($id)" tự hiểu là so sánh với column "id"(Table: product) trên server và sửa nội dung mới của mình
+        Product::find($id)->update($data);
+
+        // với with('thanhcong') ta truyền từ Controller(LaravelProject/app/Http/Controllers/Backend/ProductController.php) sang View(LaravelProject/resources/views/backend/modules/product/index.blade.php)
+        return redirect()->route('admin.product.index')->with('thanhcong', 'Sửa sản phẩm thành công');
     }
 
     /**
@@ -185,6 +214,6 @@ class ProductController extends Controller
 
         $product->delete();
 
-        return redirect()->route('admin.product.index')->with('thanhcong', 'Xóa sản phầm thành công');
+        return redirect()->route('admin.product.index')->with('thanhcong', 'Xóa sản phẩm thành công');
     }
 }

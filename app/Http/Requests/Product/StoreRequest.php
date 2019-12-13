@@ -46,7 +46,7 @@ class StoreRequest extends FormRequest
             'image.required' => 'Vui lòng nhập tên hình',
             'image.image' => 'Đây không phải là hình',
             'image.mimes' => 'File hình chỉ chấp nhận các định dạng sau: jpeg, png, jpg, gif, svg',
-            'image.max' => 'Dung lượng file không được phép lớn hơn 2Mb'
+            'image.max' => 'Dung lượng file không được phép lớn hơn 2 Mb'
         ];
     }
 }
